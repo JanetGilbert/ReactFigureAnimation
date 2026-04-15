@@ -5,6 +5,7 @@ import { Suspense } from 'react'
 
 const Logo = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Logo), { ssr: false })
 const Dog = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Dog), { ssr: false })
+const Tennis = dynamic(() => import('@/components/canvas/Tennis').then((mod) => mod.Tennis), { ssr: false })
 const Duck = dynamic(() => import('@/components/canvas/Examples').then((mod) => mod.Duck), { ssr: false })
 const View = dynamic(() => import('@/components/canvas/View').then((mod) => mod.View), {
   ssr: false,
@@ -53,7 +54,7 @@ export default function Page() {
         <div className='relative my-12 h-48 w-full py-6 sm:w-1/2 md:mb-40'>
           <View orbit className='relative h-full  sm:h-48 sm:w-full'>
             <Suspense fallback={null}>
-              <Dog scale={2} position={[0, -1.6, 0]} rotation={[0.0, -0.3, 0]} />
+              <Tennis scale={2} position={[0, -1.6, 0]} rotation={[0.0, -0.3, 0]} />
               <Common color={'lightpink'} />
             </Suspense>
           </View>
