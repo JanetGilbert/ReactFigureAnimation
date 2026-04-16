@@ -17,11 +17,7 @@ export function Tennis(props) {
     for (const [key, value] of Object.entries(materials)) {
       console.log(key + ':')
       console.log(value)
-      //value.side = THREE.TwoPassDoubleSide
-
-      if (key == 'tennista_occhiblu') {
-        value.depthWrite = true // Bug in model that makes the skin all weird
-      }
+      value.depthWrite = true // Bug in model that makes the skin all weird
       if (key == 'M_255_255_102_211' || key == 'M_255_255_255_255') {
         value.visible = false // Hide tennis ball
       }
