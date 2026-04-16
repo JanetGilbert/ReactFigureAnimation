@@ -24,13 +24,9 @@ const Common = dynamic(() => import('@/components/canvas/View').then((mod) => mo
 export default function Page() {
   return (
     <>
-      <div className='mx-auto flex w-full flex-col flex-wrap items-center p-12 md:flex-row  lg:w-4/5'>
-        <div className='relative h-48 w-full py-6 sm:w-1/2 md:my-12 md:mb-40'>
-          <h2 className='mb-3 text-3xl font-bold leading-none text-gray-800'>Anyone for tennis?</h2>
-          <p className='mb-8 text-gray-600'>Drag, scroll, pinch, and rotate the canvas to explore the 3D scene.</p>
-        </div>
-        <div className='relative my-12 h-48 w-full py-6 sm:w-1/2 md:mb-40'>
-          <View orbit className='relative h-full  sm:h-48 sm:w-full'>
+      <div className='mx-auto flex w-full h-full flex-col flex-wrap items-center p-12'>
+        <div className='relative my-12 h-full w-full py-6'>
+          <View orbit className='relative h-full'>
             <Suspense fallback={null}>
               <Tennis scale={2} position={[0, -1.6, 0]} rotation={[0.0, -0.3, 0]} />
               <Common color={'lightpink'} />
