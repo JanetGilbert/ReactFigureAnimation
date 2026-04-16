@@ -22,7 +22,7 @@ export function Tennis(props) {
       if (key == 'tennista_occhiblu') {
         value.depthWrite = true // Bug in model that makes the skin all weird
       }
-      if (key == 'M_255_255_102_211') {
+      if (key == 'M_255_255_102_211' || key == 'M_255_255_255_255') {
         value.visible = false // Hide tennis ball
       }
     }
